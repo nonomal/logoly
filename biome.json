@@ -7,48 +7,39 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+    "ignore": ["src/assets/**"]
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "indentWidth": 2
+    "indentWidth": 2,
+    "lineWidth": 100
   },
-  "css": {
-    "parser": {
-      "tailwindDirectives": true
+  "css": {},
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "none"
+    }
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
     }
   },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
-      "suspicious": {
-        "noUnknownAtRules": "off"
-      },
+
       "complexity": {
         "noExcessiveCognitiveComplexity": {
           "options": {
             "maxAllowedComplexity": 15
           }
         }
-      },
-      "a11y": {
-        "useAriaPropsSupportedByRole": "off",
-        "useSemanticElements": "off"
-      }
-    },
-    "domains": {
-      "next": "all",
-      "react": "all",
-      "project": "recommended",
-      "test": "all"
-    }
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on"
       }
     }
   }

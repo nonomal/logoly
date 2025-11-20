@@ -1,3 +1,4 @@
+> **new version is in active development at new-vue3 branch**
 <img align="right" src="https://postimg.aliavv.com/mbp/adpsj.png"/>
 
 # Logoly —— A Pornhub Flavour Logo Generator
@@ -43,15 +44,18 @@ At the end of this section, I suggest you read the [Contributing Guide](Contribu
 
 ## Requirements
 
-- Node.js
+- Node.js 18+
+- npm 10+ (official package manager; please don't submit other lockfiles)
 
 ## Get Started
 
 1. clone this project
-2. install dependencies with `npm install` at the project root directory
+2. install dependencies with `npm install` (or `npm ci` for a clean install) at the project root directory
 3. start the development server with `npm run dev`
 4. make changes
 5. build with `npm run build`
+
+All scripts and the CI pipeline run with npm. Using Bun, pnpm, or yarn may create mismatched lockfiles and is not supported.
 
 ## Related Project
 

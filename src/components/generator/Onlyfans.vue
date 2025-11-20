@@ -26,8 +26,8 @@
               class="postfix"
               :style="{
                 color: suffixColor,
-                'background-color': postfixBgColor,
-                'margin-left': suffixMargin
+                'background-color': '#00AFF0',
+                'margin-left': suffixMargin + 10
               }"
               :contenteditable="store.editable"
               @input="updateSuffix"
@@ -68,8 +68,8 @@
 </template>
 
 <script setup>
-import ExportBtn from "@/components/ExportBtn.vue";
-import { useGeneratorControls } from "@/composables/useGeneratorControls";
+import ExportBtn from '@/components/ExportBtn.vue';
+import { useGeneratorControls } from '@/composables/useGeneratorControls';
 
 const {
   store,
@@ -82,14 +82,14 @@ const {
   suffixMargin,
   updatePrefix,
   updateSuffix,
-  twitter,
+  twitter
 } = useGeneratorControls({
-  suffixMarginScale: 30,
-  postfixBgColor: "transparent",
-  suffixColor: "#00AFF0",
-  backgroundColor: "#000000",
-  initialText: { prefix: "Only", suffix: "Fans" },
-  resetText: { prefix: "edit", suffix: "me" },
+  suffixMarginScale: 50,
+  postfixBgColor: 'transparent',
+  suffixColor: '#00AFF0',
+  backgroundColor: '#000000',
+  initialText: { prefix: 'Only', suffix: 'Fans' },
+  resetText: { prefix: 'edit', suffix: 'me' }
 });
 </script>
 
@@ -120,16 +120,18 @@ const {
       font-optical-sizing: auto;
       font-weight: 200;
       font-style: normal;
+      z-index: 21;
     }
 
     .postfix {
       color: #000;
       background-color: transparent;
       padding: 5px 10px;
-      margin-left: -2rem;
+      margin-left: 0rem;
       font-family: "Arizonia", cursive;
       font-weight: 400;
       font-style: normal;
+      z-index: 20;
     }
   }
 }

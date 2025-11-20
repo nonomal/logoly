@@ -7,8 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint \"**/*.{js,jsx,cjs,mjs,vue}\" --fix",
-    "format": "prettier --write src/"
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "test": "vitest run --coverage"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -17,21 +21,26 @@
     "pinia": "^2.1.7",
     "vue": "^3.5.5",
     "vue-gtag": "^2.0.1",
-    "vue-router": "^4.3.2",
-    "vuetify": "^3.6.9"
+    "vue-router": "^4.5.0",
+    "vuetify": "^3.10.11"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.10.3",
+    "@biomejs/biome": "^1.9.4",
+    "@tailwindcss/postcss": "^4.1.17",
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vitest/coverage-istanbul": "^4.0.8",
+    "@vitest/coverage-v8": "^4.0.8",
+    "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.1.1",
-    "eslint-plugin-vue": "^9.26.0",
+    "jsdom": "^27.2.0",
     "postcss": "^8.4.38",
     "prettier": "^3.3.3",
+    "sass": "^1.94.1",
     "stylus": "^0.64.0",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^4.1.17",
     "vite": "^5.4.5",
-    "vite-plugin-compression": "^0.5.1"
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vitest": "^4.0.8"
   }
 }
